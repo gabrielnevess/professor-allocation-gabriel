@@ -12,7 +12,7 @@ public class Allocation {
     private Long id;
     @Enumerated(EnumType.STRING)
     @Column(name = "day", nullable = false)
-    private DayOfWeek day;
+    private DayOfWeek dayOfWeek;
 
     @Column(name = "startHour", nullable = false)
     private Time startHour;
@@ -34,12 +34,12 @@ public class Allocation {
         this.id = id;
     }
 
-    public DayOfWeek getDay() {
-        return day;
+    public DayOfWeek getDayOfWeek() {
+        return dayOfWeek;
     }
 
-    public void setDay(DayOfWeek day) {
-        this.day = day;
+    public void setDayOfWeek(DayOfWeek dayOfWeek) {
+        this.dayOfWeek = dayOfWeek;
     }
 
     public Time getStartHour() {
@@ -78,7 +78,7 @@ public class Allocation {
     public String toString() {
         return "Allocation{" +
                 "id=" + id +
-                ", day=" + day +
+                ", dayOfWeek=" + dayOfWeek +
                 ", startHour=" + startHour +
                 ", endHour=" + endHour +
                 ", professor=" + professor +

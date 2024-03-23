@@ -11,7 +11,7 @@ public class Professor {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "cpf", nullable = false)
+    @Column(name = "cpf", unique = true, nullable = false, length = 11)
     private String cpf;
 
     @ManyToOne
